@@ -18,7 +18,7 @@ class Months(models.IntegerChoices):
 
 class Payments(models.Model):
     student = models.ForeignKey("school.Students",  on_delete=models.CASCADE, related_name='payments')
-    group = models.ForeignKey("school.Group", on_delete=models.CASCADE, related_name="payments")
+    group = models.ForeignKey("school.Groups", on_delete=models.CASCADE, related_name="payments")
     amount = models.PositiveIntegerField(null=False)
     payment_method = models.CharField(choices=PAYMENT_METHOD_CHOICES, max_length=10)
     description = models.TextField()

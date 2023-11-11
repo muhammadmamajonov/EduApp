@@ -3,10 +3,10 @@ from administration.models import Organizations
 
 
 class Staffs(models.Model):
-    full_name = models.CharField(max_length=100, db_column='name')
+    full_name = models.CharField(max_length=100)
     organization = models.ForeignKey(Organizations, on_delete=models.CASCADE)
     position = models.CharField(max_length=50)
-    birthdate = models.DateField(db_column='year')
+    birthdate = models.DateField()
     image = models.ImageField(upload_to="staffs")
     address = models.CharField(max_length=255)
     phone = models.CharField(max_length=17)
