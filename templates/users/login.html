@@ -1,0 +1,11 @@
+
+
+
+<form action='/users/login/' method='POST'>
+    {% for message in messages %}
+        <p> {{ message }} </p>
+    {% endfor %}
+    {% csrf_token %}
+    {{ form }}
+    <input type='submit'>
+</form>

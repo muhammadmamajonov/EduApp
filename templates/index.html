@@ -1,0 +1,6 @@
+<h1> index </h1>
+{% if user.is_superuser %}
+    <h1> Welcome, Super User </h1>
+{% else %}
+    <h1> Welcome User </h1>
+{% endif %}
